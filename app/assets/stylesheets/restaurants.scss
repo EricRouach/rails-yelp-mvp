@@ -1,3 +1,41 @@
 // Place all the styles related to the Restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.padding-10 {
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  line-height: 3;
+  thead th {
+    border-bottom: 1px solid gray;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.intro, .reviews {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 1px 1px 1px gray;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.container-image {
+  background-image: url('https://i.pinimg.com/originals/ea/56/51/ea56517c33ff78b5e922408dc1c8e7a7.jpg');
+  background-size: cover;
+  height: 100vh;
+  padding: 20px;
+}

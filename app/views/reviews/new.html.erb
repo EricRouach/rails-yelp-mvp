@@ -1,2 +1,14 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<div class="container-image">
+  <div class="container">
+    <h2>Add a review to <%= @restaurant.name %></h2>
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-3">
+        <%= simple_form_for [@restaurant, @review] do |a| %>
+        <%= a.input :content, class: "form-control"%> <br>
+        <%= a.input :rating, collection: [0, 1, 2, 3, 4, 5] %> <br>
+        <%= a.button :submit, class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,14 @@ class RestaurantsController < ApplicationController
 
   def show
     set_restaurants
+    @review = Review.where(restaurant_id: @restaurant)
+    sum = 0
+    count = 0
+    @review.each do |review|
+      sum += review.rating
+      count += 1
+    end
+    sum.zero? || count.zero? ? @average = 0 : @average = (sum / count).round
   end
 
   def new

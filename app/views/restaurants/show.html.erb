@@ -1,2 +1,40 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+<div class="container-image">
+  <div class="container">
+    <div class="card">
+      <div class="card intro">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3">
+            <h1><%= @restaurant.name %></h1>
+            <hr>
+            <ul class="list-inline">
+              <% @average.times do %>
+              <li>
+                <%= image_tag "star.png", id: "star" %>
+              </li>
+              <% end %>
+            </ul>
+            <ul class="list-inline padding-10">
+              <li><%= @restaurant.name %></li>
+              <li><%= @restaurant.address %></li>
+              <li><%= @restaurant.category %></li>
+              <li><%= @restaurant.phone_number %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card reviews">
+        <div class="row">
+          <div class="col-xs-6 col-xs-offset-3">
+            <h1>Last reviews</h1>
+            <hr>
+            <% @review.each do |review| %>
+            <%= review.content%> - <strong> <%=review.rating%> </strong> <p> <%= review.created_at %> </p> <br>
+            <% end %>
+            <%= link_to 'Back', restaurants_root_path, class: "btn btn-primary" %>
+            <%= link_to 'Add a review', new_restaurant_review_path(@restaurant), class: "btn btn-warning" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

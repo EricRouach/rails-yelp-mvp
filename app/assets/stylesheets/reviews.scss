@@ -1,3 +1,27 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+p {
+  color: lightgray;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(191, 37, 25);
+  position:relative;
+  margin: auto;
+  color: white;
+  font-weight: bold;
+  p {
+    color: white;
+    padding: 11px;
+  }
+}
+
+#star {
+  width: 30px;
+  height: 30px;
+}
